@@ -24,6 +24,7 @@
 /[Aa]ssets/Plugins/Editor/JetBrains*
 
 /[Aa]ssets/Fullscreen
+/[Aa]ssets/Game/Prototypes/Vertex Shake
 
 # Visual Studio cache directory
 .vs/
@@ -72,3 +73,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/[Aa]ssets/Smooth Shake by mardt
+Assets/Game/Prototypes/Vertex Shake.meta
+Assets/Smooth Shake by mardt.meta
