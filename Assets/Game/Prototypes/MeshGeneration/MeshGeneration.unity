@@ -280,7 +280,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fa7f25e8aed9dbf488c34c76ddcc1236, type: 2}
+  - {fileID: 2100000, guid: 416c679b330d4d8429e4623255ff18b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -337,6 +337,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07edefc13517bd43821e3a93249c4bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.06666667, g: 0.11764706, b: 0.5019608, a: 1}
+    key1: {r: 0.07058824, g: 0.29803923, b: 0.63529414, a: 1}
+    key2: {r: 0.08627451, g: 0.46666667, b: 0.77254903, a: 1}
+    key3: {r: 0.23921569, g: 0.7411765, b: 1, a: 0}
+    key4: {r: 0.39215687, g: 0.93333334, b: 0.98039216, a: 0}
+    key5: {r: 0.6431373, g: 1, b: 0.9254902, a: 0}
+    key6: {r: 1, g: 1, b: 1, a: 0}
+    key7: {r: 1, g: 1, b: 1, a: 0}
+    ctime0: 0
+    ctime1: 36237
+    ctime2: 54356
+    ctime3: 57440
+    ctime4: 59662
+    ctime5: 61671
+    ctime6: 65535
+    ctime7: 65535
+    atime0: 0
+    atime1: 65535
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
   enableGizmos: 0
   xSize: 70
   zSize: 100

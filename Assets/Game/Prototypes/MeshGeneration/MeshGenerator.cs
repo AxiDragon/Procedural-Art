@@ -9,6 +9,8 @@ public class MeshGenerator : MonoBehaviour
     private Mesh mesh;
 
     private Vector3[] vertices;
+    private Color[] colors;
+    public Gradient gradient;
     private int[] triangles;
 
     public bool enableGizmos;
@@ -19,6 +21,9 @@ public class MeshGenerator : MonoBehaviour
     public float xPerlinNoiseZoom = 0.3f;
     public float zPerlinNoiseZoom = 0.3f;
     public float perlinNoiseIntensity = .2f;
+
+    private float minTerrainHeight = Mathf.Infinity;
+    private float maxTerrainHeight = Mathf.NegativeInfinity;
 
     void Start()
     {
@@ -34,6 +39,17 @@ public class MeshGenerator : MonoBehaviour
         UpdateMesh();
     }
 
+    private void UpdateMesh()
+    {
+        mesh.Clear();
+
+        mesh.vertices = vertices;
+        mesh.triangles = triangles;
+        mesh.colors = colors;
+
+        mesh.RecalculateNormals();
+    }
+    
     private void CreateShape()
     {
         UpdateVertices();
@@ -57,6 +73,18 @@ public class MeshGenerator : MonoBehaviour
 
             vert++;
         }
+
+        colors = new Color[vertices.Length]; 
+        
+        for (int i = 0, z = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+                float height = Mathf.InverseLerp(minTerrainHeight, maxTerrainHeight, vertices[i].y);
+                colors[i] = gradient.Evaluate(height);
+                i++;
+            }
+        }
     }
 
     private void UpdateVertices()
@@ -70,19 +98,28 @@ public class MeshGenerator : MonoBehaviour
                 float y = Mathf.PerlinNoise(x * xPerlinNoiseZoom / 10f + xScroll, z * zPerlinNoiseZoom / 10f + zScroll) *
                           perlinNoiseIntensity;
                 vertices[i] = new Vector3(x, y, z);
+
+                if (y > maxTerrainHeight)
+                    maxTerrainHeight = y;
+
+                if (y < minTerrainHeight)
+                    minTerrainHeight = y;
+                
                 i++;
             }
         }
-    }
-
-    private void UpdateMesh()
-    {
-        mesh.Clear();
-
-        mesh.vertices = vertices;
-        mesh.triangles = triangles;
-
-        mesh.RecalculateNormals();
+        
+        colors = new Color[vertices.Length]; 
+        
+        for (int i = 0, z = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+                float height = Mathf.InverseLerp(minTerrainHeight, maxTerrainHeight, vertices[i].y);
+                colors[i] = gradient.Evaluate(height);
+                i++;
+            }
+        }
     }
 
     private void OnDrawGizmos()
