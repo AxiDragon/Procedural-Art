@@ -24,7 +24,7 @@ public class RigidNoiseFilter : INoiseFilter
             float v = 1f - Mathf.Abs(noise.Evaluate(point * frequency + settings.center));
             v *= v;
             v *= weight;
-            weight = v * settings.weightMultiplier;
+            weight = Mathf.Clamp01(v * settings.weightMultiplier);
 
             noiseValue += v * amplitude;
             frequency *= settings.roughness;

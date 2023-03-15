@@ -67,7 +67,7 @@ MonoBehaviour:
         minValue: 0
         center: {x: 0, y: 0, z: 0}
       rigidNoiseSettings:
-        strength: 18.11
+        strength: 0.69
         roughness: 0.29
         numLayers: 2
         baseRoughness: 1.23
