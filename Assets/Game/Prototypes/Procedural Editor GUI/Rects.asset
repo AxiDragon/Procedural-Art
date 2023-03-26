@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db684821099ee8d47a7d365ff4f61386, type: 3}
+  m_Name: Rects
+  m_EditorClassIdentifier: 
+  comboClips:
+  - clip: {fileID: 8300000, guid: 9bd305569eb174a4a91ebb0f2a602607, type: 3}
+    comboRequirement: 0
+  - clip: {fileID: 8300000, guid: badca799efd9ff34aa64e550f10e2b36, type: 3}
+    comboRequirement: 5
+  comboMissClip: {fileID: 8300000, guid: 36ce504a9502d4143828742cc844cfaf, type: 3}
+  minimumPitch: 0
+  maximumPitch: 2.76
+  minimumVolume: 0.09
+  maximumVolume: 2
+  rects: []
+  rectCount: 0
+  xRange: 0.9
+  yRange: 0.9
+  isSquare: 1
+  defaultWidthRange: 0.033
+  defaultHeightRange: 0.065
+  defaultSizeRange: 0.103
+  sizeDifferenceRange: 0.375
+  addButtonOnCombo: 1
+  addButtonsBasedOnComboCount: 0
+  removeButtonsOnCombo: 1

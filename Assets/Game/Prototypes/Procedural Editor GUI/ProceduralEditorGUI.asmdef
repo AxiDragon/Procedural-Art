@@ -1,0 +1,16 @@
+{
+    "name": "ProceduralEditorGUI",
+    "rootNamespace": "",
+    "references": [
+        "GUID:250e3d5ae0453ba42b01c65371a398ed"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
