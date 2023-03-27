@@ -51,21 +51,11 @@ public class ProceduralEditorGUIDataEditor : Editor
         
         if (GUILayout.Button("Generate Rects"))
         {
-            GenerateRects();
+            data.GenerateRects();
             EditorUtility.SetDirty(data);
         }
         
         serializedObject.ApplyModifiedProperties();
     }
 
-    private void GenerateRects()
-    {
-        data.rects.Clear();
-
-        for (int i = 0; i < data.rectCount; i++)
-        {
-            Rect instance = data.GenerateRandomRect();
-            data.rects.Add(instance);
-        }
-    }
 }

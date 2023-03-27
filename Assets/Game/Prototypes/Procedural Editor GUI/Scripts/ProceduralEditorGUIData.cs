@@ -42,4 +42,15 @@ public class ProceduralEditorGUIData : ScriptableObject
     {
         rects.Add(GenerateRandomRect());
     }
+    
+    public void GenerateRects()
+    {
+        rects.Clear();
+
+        for (int i = 0; i < rectCount; i++)
+        {
+            Rect instance = GenerateRandomRect();
+            rects.Add(instance);
+        }
+    }
 }
